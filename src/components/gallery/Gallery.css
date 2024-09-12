@@ -1,0 +1,16 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px;
+}
+
+.galleryImage {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease ;
+}
+
+.galleryImage:hover {
+    transform: scale(1.05);
+}
