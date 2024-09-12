@@ -12,7 +12,11 @@ export const Selected = ({ selectedCharacter, closeModal }) => {
         />
         <h2>{selectedCharacter.name}</h2>
         <p>Especie: {selectedCharacter.species}</p>
-        <p>Estado: {selectedCharacter.status}</p>
+        <p>
+          Estado:
+          <span>{selectedCharacter.status === "Alive" ? "🟢" : "🔴"}</span>
+          <span>{selectedCharacter.status}</span>
+        </p>
         <p>Género: {selectedCharacter.gender}</p>
         <button className="closeButton" onClick={closeModal}>
           X
