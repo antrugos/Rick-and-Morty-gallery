@@ -45,8 +45,8 @@ export const Gallery = () => {
   return (
     <main className="main">
       <h1 className="galleryTitle">RICK AND MORTY GALLERY</h1>
-      {characters.map((character) => (
-        <div className="gallery">
+      <div className="gallery">
+        {characters.map((character) => (
           <img
             key={character.id}
             src={character.image}
@@ -54,8 +54,8 @@ export const Gallery = () => {
             className="galleryImage"
             onClick={() => openModal(character)}
           />
-        </div>
-      ))}
+        ))}
+      </div>
 
       {selectedCharacter && (
         <Selected
